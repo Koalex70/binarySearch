@@ -47,13 +47,13 @@ function binarySearch($fileName, $key)
     return 'undef'; // не найденно значение
 }
 
-//createFile('test3.txt', 240000000); //File size ~10.3 GB
+$fileName = 'test.txt';
+$key = 'key2';
 
-$fileName = 'test3.txt';
-$key = 'key1';
+//createFile($fileName, 430000000); //File size ~11.8 GB
 
 $time = time();
 $result = binarySearch($fileName, $key);
 $time = time() - $time;
 
-echo 'Key - ' . $key . "; Value - " . $result . ";\n" . "Lead time - " . $time . " sec.";
+echo 'Key - ' . $key . "; Value - " . $result . ";" . "Lead time - " . $time . " sec.";
