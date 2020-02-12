@@ -12,6 +12,8 @@ function createFile($fileName, $count)
     for ($i = 0; $i < $count; $i++) {
         fwrite($file, "key" . $i . "\t" . "value" . $i . "\x0A");
     }
+
+    fclose($file);
 }
 
 /**
@@ -54,4 +56,4 @@ $time = time();
 $result = binarySearch($fileName, $key);
 $time = time() - $time;
 
-echo 'Key - ' . $key . "; Value - " . $result . ";\n" . "Lead time - " . $time . " sec";
+echo 'Key - ' . $key . "; Value - " . $result . ";\n" . "Lead time - " . $time . " sec.";
